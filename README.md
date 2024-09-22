@@ -1,4 +1,4 @@
-# **AT89C51 Up Down Counter on 7-Segment Display (Assembly + Proteus)**
+# ⚙️ **8051 Up-Down Counter using Seven-Segment Display (SSD)**
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78910261/203802195-3d1d0b39-7d0f-4a25-88e8-6e8e4f05cb55.png" alt="AT89C51 UP DN COUNTER 7 Segment" width="70%">
@@ -8,69 +8,142 @@
 
 ## 📖 **Overview**
 
-This repository contains a **simple Up Down Counter** project using the **AT89C51 Microcontroller** from the **8051 MCU series**, interfaced with a **Seven-Segment Display (SSD)** and controlled using **Push Buttons**. The project utilizes **Assembly programming**, and the simulation is built using **Proteus** (Version 8.9).
+This project demonstrates a **simple Up-Down Counter** using the **[AT89C51](https://www.atmel.com/products/microcontrollers/8051.aspx)** Microcontroller, part of the **[8051 MCU](https://en.wikipedia.org/wiki/Intel_MCS-51)** family. The counter output is displayed on a **Seven-Segment Display (SSD)** and controlled by external **push buttons** for incrementing, decrementing, and resetting.
 
-Both the **Assembly Code**, **Hex Code**, and the **Proteus simulation circuit** are included in this repository. The design has been **tested on real hardware** and has shown no issues.
+The program is written in **[Assembly language](https://en.wikipedia.org/wiki/Assembly_language)**, and the circuit is simulated using **[Proteus](https://www.labcenter.com/)** (Version 8.9). This repository includes:
+- **[Assembly Code](https://en.wikipedia.org/wiki/Assembly_language)**
+- **Precompiled HEX File**
+- **[Proteus Simulation Circuit](https://www.labcenter.com/)**
 
-<br/>
+The project has been successfully tested on both simulation and real hardware.
 
-## ⚙️ **Features**
+---
 
-- **Up-Down Counter** with real-time visualization on a **7-segment display**.
-- **Push buttons** for incrementing and decrementing the counter.
-- Designed and simulated in **Proteus** and works seamlessly on **real hardware**.
-- Uses **Assembly Language** for 8051 microcontroller programming.
-  
-<br/>
+## 🔑 **Keywords**
 
+**[AT89C51 Microcontroller](https://www.atmel.com/products/microcontrollers/8051.aspx)** | 
+**[8051](https://en.wikipedia.org/wiki/Intel_MCS-51)** | 
+**[Assembly Language](https://en.wikipedia.org/wiki/Assembly_language)** | 
+**[Simulation](https://www.labcenter.com/)** | 
+**[Proteus](https://www.labcenter.com/)** | 
+**[Microcontroller Programming](https://en.wikipedia.org/wiki/Microcontroller)**
+
+---
+
+## ⚙️ **Key Features**
+
+<div align="center">
+
+| Feature                      | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| 🔢 **Up-Down Counter**         | Real-time counting with a 7-segment display                                  |
+| 🎛️ **Push Button Controls**    | Buttons for incrementing, decrementing, and resetting the counter            |
+| 🖥️ **Proteus Simulation**      | Ready-to-use simulation circuit (Proteus 8.9 compatible)                     |
+| 💾 **Assembly Programming**    | Written entirely in **Assembly language** for the AT89C51                    |
+| 🛠️ **Real Hardware Support**   | Tested successfully on physical hardware                                    |
+
+</div>
+
+---
+
+---
+
+## 📦 **Contents**
+
+<div align="center">
+
+| File                          | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `AT89C51_Up_Down_Counter.asm`  | Assembly source code for the AT89C51 microcontroller                        |
+| `AT89C51_Up_Down_Counter.hex`  | Precompiled HEX file for direct microcontroller upload                      |
+| `Proteus_Simulation.pdsprj`    | Proteus Design Suite simulation file                                        |
+| **Screenshots**                | Demonstrations from the Proteus simulation                                  |
+
+</div>
+
+---
 ## 🛠️ **Hardware & Circuit Information**
 
-In the real hardware implementation, current-limiting resistors are required for the **LEDs inside the Seven-Segment Display**. The **common cathode pin** of the display needs an external **current driver circuit**, which is managed by a **transistor** in this design. 
+<div align="center">
 
-Below is a simplified diagram of the **7-segment display** pinout and internal circuit that explains the data pattern for the **common cathode display** type.
+| Hardware Component             | Description                                                                 |
+|---------------------------------|-----------------------------------------------------------------------------|
+| **AT89C51 Microcontroller**     | Core of the project, controlling the up-down counting                        |
+| **Seven-Segment Display (SSD)** | A common cathode display for output                                          |
+| **Push Buttons**                | Used for incrementing, decrementing, and resetting the counter               |
+| **Transistors (e.g., NPN)**     | To drive the SSD segments                                                    |
+| **Resistors**                   | For current-limiting to protect the microcontroller and SSD                  |
+| **Power Supply**                | A 5V DC power supply for the microcontroller and SSD circuit                 |
 
-<br/>
+</div>
+
+---
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78910261/203802987-13da40f2-8b33-4ebd-ad10-d2c8eb3dfa45.png" alt="7 Segment Display (Common Cathode)" width="70%">
 </p>
 
-<br/>
+### **Circuit Explanation**:
 
-## 🧰 **Included Files**
+The **Seven-Segment Display** in this project is a **common cathode** type, meaning all cathodes are connected to ground. The microcontroller sends signals to the anode pins through **transistor drivers** to control which segments are illuminated, forming numbers 0–9.
 
-- **Assembly Code** – Written for the **AT89C51** microcontroller.
-- **HEX File** – Pre-compiled for uploading directly to the microcontroller.
-- **Proteus Simulation Circuit** – Designed for version 8.9 of Proteus Design Suite.
+Each push button is connected to an input pin on the microcontroller, allowing the counter value to be incremented, decremented, or reset. **Resistors** ensure proper current control to prevent damage to the microcontroller and display.
 
-<br/>
+---
 
 ## 🖥️ **Installation & Usage**
 
-1. **Clone this repository**:
+### **Step-by-Step Guide:**
 
+1. **Clone this repository**:
    ```bash
-   git clone https://github.com/yourusername/AT89C51_Up_Down_Counter_7_Segment_Assembly_Proteus.git
+   git clone https://github.com/gmostofabd/8051_Up_Down_Counter_SSD.git
    ```
 
-2. **Assembly Code**: Open and compile the assembly code using **MIDE-51** or any 8051 compatible IDE.
+2. **Compile the Assembly Code**:
+   Open the `AT89C51_Up_Down_Counter.asm` file in **MIDE-51** or a compatible IDE, and compile it to generate the **HEX file**.
 
-3. **Simulate in Proteus**: Use **Proteus 8.9 or higher** to run the provided simulation file and visualize the up/down counter functionality.
+3. **Simulate in Proteus**:
+   Open **Proteus Design Suite**, load the provided simulation file, and run the simulation to observe the counter’s behavior.
 
-4. **Program the Microcontroller**: Upload the **hex file** to your AT89C51 development board using **avrdudes** or a similar programmer.
+4. **Program the Microcontroller**:
+   For real hardware, upload the **HEX file** to the AT89C51 microcontroller using a programmer.
 
-<br/>
+5. **Test the Circuit**:
+   Assemble the hardware based on the provided circuit diagram, power it on, and test the push buttons for incrementing, decrementing, and resetting the counter.
+
+---
 
 ## 🔗 **Additional Information**
 
-The **7-segment display** used in this project is a **common cathode** type. The **push buttons** control the count, and a **transistor driver circuit** is used to manage the current required by the display. For more details about interfacing, refer to the circuit diagram provided in the repository.
+### **Seven-Segment Display**:
+The **common cathode** display has 8 LEDs (7 segments and 1 decimal point) to represent digits 0-9. The microcontroller drives the LEDs through combinations of HIGH/LOW signals.
+
+### **Push Button Controls**:
+- **Increment Button**: Increases the counter by 1.
+- **Decrement Button**: Decreases the counter by 1.
+- **Reset Button**: Resets the counter to 0.
+
+For a deeper understanding of the circuit and code, explore the **Proteus simulation** and the comments in the assembly source file.
 
 ---
 
-Feel free to explore the project and contribute if you have ideas for improvement!
+## 🤝 **Contributing**
+
+We welcome contributions! Feel free to submit pull requests or open issues for any bug fixes, feature enhancements, or optimizations to the assembly code.
+
+---
 
 ## 📧 **Contact**
 
-For any inquiries or suggestions, feel free to reach out at [mostofa.melab@gmail.com](mailto:mostofa.melab@gmail.com).
+For any inquiries or assistance, reach out at [mostofa.melab@gmail.com](mailto:mostofa.melab@gmail.com).
 
 ---
+
+
+
+<p align="center">
+  <img src="your-contact-graphic.png" alt="Contact Graphic" width="50%">
+</p>
+
+If you found this project helpful, give it a ⭐ on GitHub!
